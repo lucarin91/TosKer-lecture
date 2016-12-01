@@ -10,7 +10,14 @@ imports:
 
 topology_template:
   inputs:
-    # TODO: we can use inputs to improuve configurability
+    app_port:
+      type: integer
+      default: 8080
+      description: the application port
+    api_port:
+      type: integer
+      default: 8000
+      description: the API port
 
   node_templates:
     api:
@@ -50,7 +57,7 @@ topology_template:
             implementation: scripts/gui/configure.sh
             inputs:
               apiUrl: localhost
-              apiPort: 8000
+              apiPort: { get_input: api_port }
           start:
             implementation: scripts/gui/start.sh
           stop:
@@ -62,7 +69,7 @@ topology_template:
       type: tosker.docker.container
       properties:
         ports:
-          8080: 8000
+          8080: { get_input: api_port }
       artifacts:
         my_image:
           file: maven:3.3-jdk-8
@@ -73,7 +80,7 @@ topology_template:
       type: tosker.docker.container
       properties:
         ports:
-          3000: 8080
+          3000:  { get_input: app_port }
       artifacts:
         my_image:
           file: node:6
