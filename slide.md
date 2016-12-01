@@ -9,7 +9,7 @@ The execution of all the activities that make a software system available to use
 
 Nowadays strictly related to the cloud infrastructure. <!-- .element: class="fragment" -->
 
-<div>Need of a way to express all the **requirements** and **capability** that the application needs to run. </div><!-- .element: class="fragment" -->
+<div>Need of a way to express all the **requirements** and **capabilities** that the application needs to run. </div><!-- .element: class="fragment" -->
 
 Note:
 OS, database connection, library to install, programming language, and so on..
@@ -21,9 +21,9 @@ OS, database connection, library to install, programming language, and so on..
 ---
 
 ## Docker
-Docker containers wrap up the software and all their requirements: code, runtime, system tools, system libraries. <!-- .element: class="fragment" -->
+Docker containers wrap up the software and all the requirements: code, runtime, system tools, system libraries. <!-- .element: class="fragment" -->
 
-This guarantees that they will always run in all environment that support Docker. <!-- .element: class="fragment" -->
+This guarantees that the software always run in all environment that support Docker. <!-- .element: class="fragment" -->
 
 **Embed all the requirements inside a container!** <!-- .element: class="fragment" -->
 
@@ -39,7 +39,7 @@ Following the description it is possible to replicate the configuration of the a
 ---
 
 ## TOSCA vs. Docker
-Two different approach to resolve the same problem.
+Two different approach to resolve the same problem:
 
 **installation** vs **description**
 
@@ -73,7 +73,7 @@ Why not combining them instead of choosing?
 ---
 
 ## TosKer
-Project that aims to combine **TOSCA** and **Docker** to improve the deployment of applications on the Cloud.
+Project that aims to combine **TOSCA** and **Docker** to simplify the deployment of applications on the Cloud.
 
 ---
 
@@ -451,3 +451,19 @@ tosker app.yaml stop delete
 ---
 
 # Demo
+
+---
+
+## Achievements of TosKer
+
+- Combine the deployment of Software components together with Docker Container
+
+- Implementation an engine that accept a subset of the TOSCA language
+
+---
+
+## Know Limitation
+
+- Cannot support TOSCA hierarchy type system
+
+- Only work with Docker engine (no Swarm)

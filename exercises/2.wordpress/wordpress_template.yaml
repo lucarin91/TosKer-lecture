@@ -10,7 +10,7 @@ imports:
 
 topology_template:
   inputs:
-    # TODO: we can use inputs to improuve configurability
+    # TODO: we can use inputs to improve configurability
 
   node_templates:
     wordpress:

@@ -28,7 +28,7 @@ topology_template:
     nginx:
       type: tosker.software
       requirements:
-        - host: # TODO: add node where isntall this component
+        - host: # TODO: add node where install this component
       interfaces:
         Standard:
           create:
