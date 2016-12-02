@@ -9,7 +9,7 @@ The execution of all the activities that make a software system available to use
 
 Nowadays strictly related to the cloud infrastructure. <!-- .element: class="fragment" -->
 
-<div>Need of a way to express all the **requirements** and **capabilities** that the application needs to run. </div><!-- .element: class="fragment" -->
+<div>Need of a way to express all the **requirements** that the application needs to run. </div><!-- .element: class="fragment" -->
 
 Note:
 OS, database connection, library to install, programming language, and so on..
@@ -38,7 +38,7 @@ Following the description it is possible to replicate the configuration of the a
 
 ---
 
-## TOSCA vs. Docker
+## Docker vs. TOSCA
 Two different approach to resolve the same problem:
 
 **installation** vs **description**
@@ -117,7 +117,7 @@ TosKer support only those custom types:
 
 Tosker support all the normative relationship:
 
-- host *tosca.relationships.AttachesTo* <!--.element: style="font-size:20pt;"-->
+- host *tosca.relationships.HostedOn* <!--.element: style="font-size:20pt;"-->
 
 - connect *tosca.relationships.ConnectsTo* <!--.element: style="font-size:20pt;"-->
 
@@ -211,14 +211,14 @@ my_container:
   type: tosker.docker.container.persistent
   requirements:
     - connect: my_other_container
-    - depend: my_other_software
+    - depend: my_software
     - attach: my_volume
   properties:
     ports:
       80: 8000
   artifacts:
     my_image:
-      file: ubuntu:16.04
+      file: mysql
       type: tosker.docker.image
       repository: docker_hub
 ```
@@ -305,7 +305,7 @@ my_software:
   type: tosker.software
   requirements:
     - connect: my_other_software
-    - depend: my_other_software
+    - depend: my_container
     - host: my_container
   interfaces:
     Standard:
@@ -340,16 +340,6 @@ imports:
   - tosker: https://di-unipi-socc.github.io/tosker-types/0.0.5/tosker.yaml
 
 topology_template:
-  inputs:
-    app_port:
-      type: integer
-      default: 8080
-      description: the application port
-    api_port:
-      type: integer
-      default: 8000
-      description: the API port
-
   node_templates:
     api:
       type: tosker.software
@@ -391,7 +381,7 @@ topology_template:
       type: tosker.docker.container
       properties:
         ports:
-          8080: { get_input: api_port }
+          8080: 8000
       artifacts:
         my_image:
           file: maven:3.3-jdk-8
@@ -402,7 +392,7 @@ topology_template:
       type: tosker.docker.container
       properties:
         ports:
-          3000: { get_input: app_port }
+          3000: 8080
       artifacts:
         my_image:
           file: node:6
@@ -462,7 +452,7 @@ tosker app.yaml stop delete
 
 ---
 
-## Know Limitation
+## Knows Limitations
 
 - Cannot support TOSCA hierarchy type system
 

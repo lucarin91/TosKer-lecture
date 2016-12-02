@@ -15,7 +15,7 @@ topology_template:
       artifacts:
         site: my_site/site.html
       requirements:
-        - host: # TODO: add a webservice node
+        - host: nginx
       interfaces:
         Standard:
           create:
@@ -28,7 +28,7 @@ topology_template:
     nginx:
       type: tosker.software
       requirements:
-        - host: # TODO: add node where install this component
+        - host: server1
       interfaces:
         Standard:
           create:
@@ -48,9 +48,9 @@ topology_template:
       type: tosker.docker.container
       properties:
         ports:
-          # TODO: add the port binding
+          80: 8080
       artifacts:
         my_image:
-          file: # TODO: add a Docker image here
+          file: ubuntu:16.04
           type: tosker.docker.image
           repository: docker_hub
