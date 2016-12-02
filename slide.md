@@ -448,7 +448,7 @@ tosker app.yaml stop delete
 
 - Combine the deployment of Software components together with Docker Container
 
-- Implementation an engine that accept a subset of the TOSCA language
+- Implementation an engine that accept the TOSCA language
 
 ---
 
