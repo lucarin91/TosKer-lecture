@@ -1,0 +1,164 @@
+\documentclass{beamer}
+
+% \input{../definitions}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% \usepackage[backend=bibtex, sorting=nty, style=numeric]{biblatex}
+% \addbibresource{../references.bib}
+
+\usetheme{Frankfurt}
+\usecolortheme{whale}
+% #3778C6
+\definecolor{myblue1}{RGB}{55,120,198}
+\definecolor{myblue2}{RGB}{37,78,136}
+\definecolor{myblue3}{RGB}{0,20,137}
+% \definecolor{white}{RGB}{255,255,255}
+% \definecolor{black}{RGB}{0,0,0}
+
+
+\setbeamercolor*{frametitle}{fg=white,bg=myblue2}
+\setbeamercolor*{title}{fg=white,bg=myblue2}
+\setbeamercolor*{structure}{fg=myblue2}
+
+
+\title[About Beamer] %optional
+{Orchestrating applications with\\ TOSCA and Docker}
+
+% \subtitle{A short story}
+
+\author[lucarin91] % (optional, for multiple authors)
+{Luca Rinaldi}
+
+\institute[unipi] % (optional)
+{
+  {\small University of Pisa}
+}
+
+% \logo{\includegraphics[height=1.5cm]{../thesis/style/logo.png}}
+
+\date[2017] % (optional)
+{
+  {\small June 2017}
+}
+
+% \AtBeginSubsection[]
+% {
+% \begin{frame}{Table of Contents}
+% \tableofcontents[
+%   currentsection,
+%   currentsubsection,
+%   sectionstyle=show/shaded,
+%   subsectionstyle=show/shaded
+% ]
+% \end{frame}
+% }
+\AtBeginSection[]{
+  \begin{frame}{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+\begin{frame}
+  \maketitle
+\end{frame}
+
+% \begin{frame}{Table of Contents}
+%   \tableofcontents
+% \end{frame}
+
+\section{Context}\subsection*{}
+
+  \begin{frame}{Software deployment}
+    The execution of all the activities that make a software system available to use.
+
+    Nowadays strictly related to the cloud infrastructure.
+
+    Need of a way to express all the \textbf{requirements} that the application needs to run.
+  \end{frame}
+
+
+\section{Docker}\subsection*{}
+
+  \begin{frame}{Docker}
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{img/docker.png}
+       \end{figure}
+	% Docker containers wrap up the software and all the requirements: code, runtime, system tools, system libraries.
+       % This guarantees that the software always run in all environment that support Docker. 
+  \end{frame}
+
+\begin{frame}{Docker: what?}
+
+\end{frame}
+
+  \begin{frame}{Docker: main comcepts}
+	\begin{itemize}
+		\item Dockerfile
+		\item Docker Image
+		\item Docker Container
+		\item Docker Volume
+	\end{itemize}
+
+  \end{frame}
+
+  \begin{frame}{Docker: pro and cons}
+
+  \end{frame}
+
+\section{TOSCA}\subsection*{}
+
+  \begin{frame}{TOSCA: What?}
+
+  \end{frame}
+
+  \begin{frame}{TOSCA: How?}
+
+  \end{frame}
+
+  \begin{frame}{TOSCA: main concept}
+
+  \end{frame}
+
+  \begin{frame}{TOSCA: problems}
+
+  \end{frame}
+
+\section{TosKer}\subsection*{}
+
+  \begin{frame}{TosKer: what?}
+
+  \end{frame}
+
+  \begin{frame}{TosKer: how?}
+
+  \end{frame}
+
+  \begin{frame}{TosKer: DEMO}
+
+  \end{frame}
+
+  \begin{frame}{TosKer: main advantage}
+
+  \end{frame}
+
+\section{Conclusion and Future works}\subsection*{}
+
+  \begin{frame}{Future works}
+
+  \end{frame}
+
+  \begin{frame}{Conclusions}
+
+  \end{frame}
+
+  \begin{frame}
+    \centering
+    \Huge Thank You \\
+    \bigskip
+    \LARGE Q\&A
+  \end{frame}
+\end{document}
