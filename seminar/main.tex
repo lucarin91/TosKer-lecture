@@ -84,25 +84,41 @@
 \section{Docker}\subsection*{}
 
   \begin{frame}{Docker}
-	\begin{figure}
-		\includegraphics[width=0.8\textwidth]{img/docker.png}
-       \end{figure}
-	% Docker containers wrap up the software and all the requirements: code, runtime, system tools, system libraries.
-       % This guarantees that the software always run in all environment that support Docker. 
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{img/docker.png}
+    \end{figure}
+    % Docker containers wrap up the software and all the requirements: code, runtime, system tools, system libraries.
+    % This guarantees that the software always run in all environment that support Docker.
   \end{frame}
 
-\begin{frame}{Docker: what?}
+  \begin{frame}{Docker: What?}
+    \begin{figure}
+      \includegraphics[width=1\textwidth]{img/docker_vs_vm.png}
+    \end{figure}
+  \end{frame}
 
-\end{frame}
+  \begin{frame}{Docker: Architecture}
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{img/docker_achitecture_crop.png}
+    \end{figure}
+    \begin{itemize}
+      \item LXC %TODO: add spiegazione
+      \item LAYER FS
+      \item CGROUPS
+      \item NAME SPACE
+      \item LINUX KERNEL
+    \end{itemize}
+  \end{frame}
 
   \begin{frame}{Docker: main comcepts}
-	\begin{itemize}
-		\item Dockerfile
-		\item Docker Image
-		\item Docker Container
-		\item Docker Volume
-	\end{itemize}
-
+    Main concept of the Docker platform
+    \begin{itemize}
+      \item \texttt{Dockerfile}, a scripts to generate an Image
+      \item \texttt{Docker Image}, a LAYER FS archive whit all the data
+      \item \texttt{Docker Container}, Running instance of a Docker Image
+      \item \texttt{Docker Volume}, a persistent data storage
+      \item \texttt{Docker Hub}, a Database of Docker Image open to comunity
+    \end{itemize}
   \end{frame}
 
   \begin{frame}{Docker: pro and cons}
