@@ -1,5 +1,6 @@
 \beamer@sectionintoc {1}{Context}{2}{0}{1}
 \beamer@sectionintoc {2}{Docker}{4}{0}{2}
-\beamer@sectionintoc {3}{TOSCA}{10}{0}{3}
-\beamer@sectionintoc {4}{TosKer}{15}{0}{4}
-\beamer@sectionintoc {5}{Conclusion and Future works}{20}{0}{5}
+\beamer@sectionintoc {3}{TOSCA}{11}{0}{3}
+\beamer@sectionintoc {4}{Docker and TOSCA}{18}{0}{4}
+\beamer@sectionintoc {5}{TosKer}{20}{0}{5}
+\beamer@sectionintoc {6}{Conclusion and Future works}{25}{0}{6}

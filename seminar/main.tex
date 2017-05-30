@@ -122,24 +122,68 @@
   \end{frame}
 
   \begin{frame}{Docker: for deploy application}
-    
+    \begin{figure}
+      \includegraphics[width=1\textwidth]{img/docker_build.pdf}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Docker: multicontainer}
+    \begin{figure}
+      \includegraphics[width=1\textwidth]{img/docker_multicontainer.pdf}
+    \end{figure}
   \end{frame}
 
 \section{TOSCA}\subsection*{}
-
   \begin{frame}{TOSCA: What?}
+    OASIS standard language to describe the topology of an application, with its components and relationships.
+    \bigskip
 
-  \end{frame}
-
-  \begin{frame}{TOSCA: How?}
-
+    \centering
+    \textbf{Describe every part of your application!}
   \end{frame}
 
   \begin{frame}{TOSCA: main concept}
-
+    \begin{figure}
+      \includegraphics[width=0.9\textwidth]{img/service-template.png}
+    \end{figure}
   \end{frame}
 
-  \begin{frame}{TOSCA: problems}
+  \begin{frame}{TOSCA: Node type}
+    \begin{figure}
+      \includegraphics[width=0.3\textwidth]{img/tosca_node_type.png}
+    \end{figure}
+    \begin{itemize}
+      \item \textbf{requirements}, what the node require
+      \item \textbf{capabilities}, what the node offer
+      \item \textbf{properties}, the properties of the node
+      \item \textbf{interfaces}, the operation to implement
+      \item \textbf{artifacts}, the data need to use the node
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{TOSCA main concepst}
+      \begin{itemize}
+        \item the description use a YAML destription
+        \item CSAR its an archive with the YAML description and all the artifacts
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}{TOSCA: how it works}
+    \begin{itemize}
+      \item create an archive (.CSAR) whit the description and artifacts
+      \item send to acompatible infrastructure
+      \item following the description and using the artifacts the application can deploy
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{TOSCA orchestration}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{img/tosca_deploy.png}
+    \end{figure}
+  \end{frame}
+
+\section{Docker and TOSCA}\subsection*{}
+  \begin{frame}{Recap}
 
   \end{frame}
 
