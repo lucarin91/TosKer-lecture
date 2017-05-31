@@ -133,6 +133,14 @@
     \end{figure}
   \end{frame}
 
+  \begin{frame}{Problems}
+    \begin{itemize}
+      \item[\textcolor{red}{\textbf{--}}] Poor application orchestration
+      \item[\textcolor{red}{\textbf{--}}] The container hide the components that it contains
+      \item[\textcolor{red}{\textbf{--}}] Can orchestrate only container
+    \end{itemize}
+  \end{frame}
+
 \section{TOSCA}\subsection*{}
   \begin{frame}{TOSCA: What?}
     OASIS standard language to describe the topology of an application, with its components and relationships.
@@ -176,32 +184,176 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{TOSCA orchestration}
+  \begin{frame}{Orchestration}
     \begin{figure}
       \includegraphics[width=\textwidth]{img/tosca_deploy.png}
     \end{figure}
   \end{frame}
 
-\section{Docker and TOSCA}\subsection*{}
-  \begin{frame}{Recap}
-
+  \begin{frame}{Problems}
+    \begin{itemize}
+      \item[\textcolor{red}{\textbf{--}}] The specification can become too verbose
+      \item[\textcolor{red}{\textbf{--}}] A good standard but not a product
+      \item[\textcolor{red}{\textbf{--}}] Lack of engines which accept TOSCA description
+    \end{itemize}
   \end{frame}
 
 \section{TosKer}\subsection*{}
+  \begin{frame}{TosKer}
+    An orchestration engine capable of deploying, on top of Docker, applications described in TOSCA YAML.
+  \end{frame}
 
   \begin{frame}{TosKer: what?}
-
+    TosKer inputs a TOSCA description of a multi-component application, where some components are Docker containers and Docker volumes, and automatically deploys and orchestrates it using the Docker engine.
   \end{frame}
 
-  \begin{frame}{TosKer: how?}
-
+  \begin{frame}{Describing applications in TosKer}
+    \begin{itemize}
+      \item Applications are specified as a composition of the following components:\begin{itemize}
+          \item \small\emph{Docker containers} {\tiny\texttt{tosker.nodes.Container}}
+          \item \small\emph{Docker volumes} {\tiny\texttt{tosker.nodes.Volume}}
+          \item \small\emph{Software} {\tiny\texttt{tosker.nodes.Software}}
+        \end{itemize}\pause
+      \item There can be the following relationships between components:\begin{itemize}
+          \item \small\emph{hosted on} {\tiny\texttt{tosca.relationships.HostedOn}}
+          \item \small\emph{connected to} {\tiny\texttt{tosca.relationships.ConnectsTo}}
+          \item \small\emph{attached to} {\tiny\texttt{tosca.relationships.AttachesTo}}
+          \item \small\emph{depending on} {\tiny\texttt{tosca.relationships.DependsOn}}
+        \end{itemize}
+    \end{itemize}
   \end{frame}
 
-  \begin{frame}{TosKer: DEMO}
-
+  \begin{frame}{tosker.nodes.Container}
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{img/tosker_types_container.pdf}
+    \end{figure}
   \end{frame}
 
-  \begin{frame}{TosKer: main advantage}
+  \begin{frame}{tosker.nodes.Software}
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{img/tosker_types_software.pdf}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{tosker.nodes.Volume}
+    \begin{figure}
+      \includegraphics[width=0.8\textwidth]{img/tosker_types_volume.pdf}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Constrains}
+    Each application must meet some constrains, e.g.,
+    \begin{itemize}
+      \item \small A \emph{software} must be ``\emph{hosted on}'' another \emph{software} or a \emph{Docker container}
+      \item \small A \emph{Docker container} and \emph{Docker volume} cannot be ``\emph{hosted on}'' other components
+      \item \small Only \emph{Docker containers} can be ``\emph{attached to}'' \emph{Docker volumes}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Case study: Thoughts}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{img/thoughts_architecture.pdf}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}{Architecture}
+    \begin{figure}
+      \includegraphics[width=\textwidth]{img/architecture.png}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}[t]{How TosKer orchestrates applications}
+    % \vspace*{-.5em}
+    \only<1>{
+      \begin{figure}
+        \includegraphics[width=.9\textwidth]{img/tosker_how_1.pdf}
+      \end{figure}
+      The input of TosKer is
+      \begin{itemize}
+        \item a TOSCA application specified using TosKer types, and
+        \item management operation(s) to perform.
+      \end{itemize}
+    }
+    \only<2>{
+      \begin{figure}
+        \includegraphics[width=.9\textwidth]{img/tosker_how_2.pdf}
+      \end{figure}
+      \vspace*{-.5em}
+      TosKer
+      \begin{itemize}
+        \item parses and validates the TOSCA application, and
+        % \item create an internal representation of the application
+        \item executes a topological sorting algorithm.
+      \end{itemize}
+    }
+    \only<3>{
+      \begin{figure}
+        \includegraphics[width=.9\textwidth]{img/tosker_how_3.pdf}
+      \end{figure}
+      \vspace*{-.5em}
+      TosKer %exploits the (topologically sorted) application to orchestrate it:
+      \begin{itemize}
+        \item scans the sorted application topology, and
+        \item for each component, it calls a specific operation (e.g., create)
+      \end{itemize}
+    }
+    \only<4>{
+      \begin{figure}
+        \includegraphics[width=.9\textwidth]{img/tosker_how_4.pdf}
+      \end{figure}
+      Each manager is in charge of implementing/executing the invoked operation on a component...
+    }
+    \only<5>{
+      \begin{figure}
+        \includegraphics[width=.9\textwidth]{img/tosker_how_5.pdf}
+      \end{figure}
+      ...by properly invoking the Docker engine (through the Docker interface)
+    }
+  \end{frame}
+
+  \begin{frame}{Implementation}
+    \begin{columns}[b]
+      \begin{column}{.3\textwidth}
+        \centering
+        % \onslide<1->{
+          \begin{figure}
+            \includegraphics[width=.6\textwidth]{img/python.png}
+          \end{figure}
+          {\large Python}
+        % }
+      \end{column}
+      \begin{column}{.3\textwidth}
+        \centering
+        % \onslide<2->{
+          \begin{figure}
+            \includegraphics[width=.6\textwidth]{img/github.png}
+          \end{figure}
+          {\large GitHub}
+        % }
+      \end{column}
+      \begin{column}{.3\textwidth}
+        \centering
+        % \onslide<2>{
+          \begin{figure}
+            \includegraphics[width=.6\textwidth]{img/mit.png}
+          \end{figure}
+          {\large MIT Licence}
+        % }
+      \end{column}
+    \end{columns}
+      \vspace{20pt}
+      \begin{itemize}
+        \item %\onslide<1->{
+          \small\textbf{PyPI}: \href{https://pypi.python.org/pypi/tosKer}{https://pypi.python.org/pypi/tosKer}\\
+          \indent\indent\texttt{pip install tosker}\vspace{10pt}
+        % }
+        \item %\onslide<2>{
+          \small\textbf{GitHub}: \href{https://github.com/di-unipi-socc/TosKer}{https://github.com/di-unipi-socc/TosKer}
+        % }
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Advantages and Limitations}
 
   \end{frame}
 
