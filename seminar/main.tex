@@ -137,25 +137,40 @@
     \end{figure}
   \end{frame}
 
-  \begin{frame}{Docker Architecture}
+  \begin{frame}{Main concepts}
+    Main concepts of the Docker platform
+    \begin{itemize}
+      \item \textbf{Dockerfile}, a script to generate a Docker Image
+      \item \textbf{Docker Image}, a separated file-system with all the binaries and library
+      \item \textbf{Docker Container}, running instance of a Docker Image
+      \item \textbf{Docker Volume}, a persistent data storage system
+      \item \textbf{Docker Hub}, a public database of Docker Images
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Architecture of Docker}
     \begin{figure}
       \includegraphics[width=.7\textwidth]{img/docker_achitecture_crop.png}
     \end{figure}
     \begin{itemize}
       \item \textbf{LXC}, an operating-system-level virtualization method
-      \item \textbf{Layer file-system}, a Union file system (which implements: \texttt{combine updates} and \texttt{copy-on-write})
+      \item \textbf{Layer file-system}, a Union file system
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Docker main concepts}
-    Main concepts of the Docker platform
-    \begin{itemize}
-      \item \textbf{Dockerfile}, a script to generate an Image
-      \item \textbf{Docker Image}, a separated file-system with all the binaries and library
-      \item \textbf{Docker Container}, running instance of a Docker Image
-      \item \textbf{Docker Volume}, a persistent data storage
-      \item \textbf{Docker Hub}, a public database of Docker Images
-    \end{itemize}
+  \begin{frame}{Layer file-system}
+    \only<1>{
+      Each layer is only a set of differences from the layer before it.
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{img/container-layers.jpg}
+      \end{figure}
+    }
+    \only<2>{
+      Copy-on-write permits to share the same layer between more containers.
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{img/sharing-layers.jpg}
+      \end{figure}
+    }
   \end{frame}
 
   \begin{frame}{How use Docker}
@@ -198,7 +213,9 @@
     \begin{itemize}
       \item[\textcolor{red}{\textbf{--}}]<1-> The container hide the components that it contains
       \item[\textcolor{red}{\textbf{--}}]<2-> Poor application orchestration
-      \item[\textcolor{red}{\textbf{--}}]<3-> Can orchestrate only container (Docker compose)
+      \item[\textcolor{red}{\textbf{--}}]<3->
+      Docker containers as "minimal orchestration entities"
+      %Can orchestrate only container (Docker compose)
     \end{itemize}
   \end{frame}
 
@@ -212,9 +229,9 @@
 
   \begin{frame}{Main concepts}
       \begin{itemize}
-        \item The description use YAML
-        \item CSAR it is an archive with the TOSCA description and all the artifacts
-        \item declarative processing
+        \item YAML-based description
+        \item CSAR archive containing TOSCA specs and executable artifacts
+        \item Declarative processing
       \end{itemize}
   \end{frame}
 
@@ -229,11 +246,11 @@
       \includegraphics[width=0.3\textwidth]{img/tosca_node_type.png}
     \end{figure}
     \begin{itemize}
-      \item \textbf{requirements}, what node requires
-      \item \textbf{capabilities}, what node offers
-      \item \textbf{properties}, properties of the node
-      \item \textbf{interfaces}, operations to deploy and manage the node
-      \item \textbf{artifacts}, data needed by the node to implement the interface
+      \item \textbf{requirements}, what a component requires
+      \item \textbf{capabilities}, what a component offers
+      \item \textbf{properties}, descriptive information about a component
+      \item \textbf{interfaces}, operations to deploy and manage a component
+      \item \textbf{artifacts}, installables/executables/data implementing interface operations
     \end{itemize}
   \end{frame}
 
@@ -248,7 +265,7 @@
     % \end{enumerate}
   \end{frame}
 
-  \begin{frame}{Declarative process}
+  \begin{frame}{Declarative processing - A possible execution}
     \begin{columns}[c]
       \begin{column}{.65\textwidth}
         \begin{figure}
@@ -257,10 +274,8 @@
       \end{column}
       \begin{column}{.35\textwidth}
         \begin{enumerate}
-          \item<1-> Debian
-          \item<1-> Ubuntu
-          \item<2-> Apache
-          \item<2-> MySQL DBMS
+          \item<1-> Debian, Ubuntu
+          \item<2-> Apache, MySQL
           \item<3-> Database
           \item<4> Web Application
         \end{enumerate}
@@ -270,9 +285,9 @@
 
   \begin{frame}{Problems}
     \begin{itemize}
-      \item[\textcolor{red}{\textbf{--}}] The specification can become too verbose
-      \item[\textcolor{red}{\textbf{--}}] A good standard but not a product
-      \item[\textcolor{red}{\textbf{--}}] Lack of engines which accept TOSCA description
+      \item[\textcolor{red}{\textbf{--}}] Specs may be too verbose
+      \item[\textcolor{red}{\textbf{--}}] Lack of tools for supporting development of TOSCA apps
+      \item[\textcolor{red}{\textbf{--}}] Lack of engines for running  TOSCA apps
     \end{itemize}
   \end{frame}
 
@@ -281,8 +296,8 @@
     An orchestration engine capable of deploying, on top of Docker, applications described in TOSCA YAML.
 
     \begin{itemize}
-      \item inputs a TOSCA description of a multi-component application
-      \item automatically deploys and orchestrates it using the Docker engine
+      \item TosKer inputs a TOSCA description of a multi-component application, and
+      \item it automatically deploys and orchestrates such application on top of the Docker engine
     \end{itemize}
   \end{frame}
 
@@ -293,7 +308,8 @@
           \item \small\emph{Docker volumes} {\footnotesize\texttt{tosker.nodes.Volume}}
           \item \small\emph{Software} {\footnotesize\texttt{tosker.nodes.Software}}
         \end{itemize}\pause
-      \item There can be the following relationships between components:\begin{itemize}
+      \item Components can be interconnected with the following relationships:
+      \begin{itemize}
           \item \small\emph{hosted on} {(\footnotesize\texttt{tosca.relationships.HostedOn})}
           \item \small\emph{connected to} {(\footnotesize\texttt{tosca.relationships.ConnectsTo})}
           \item \small\emph{attached to} {(\footnotesize\texttt{tosca.relationships.AttachesTo})}
@@ -320,8 +336,8 @@
     \end{figure}
   \end{frame}
 
-  \begin{frame}{Constrains on the composition}
-    Each application must meet some constrains, e.g.,
+  \begin{frame}{Topology constraints}
+    Each application topology must satisfy a set of constraints on how to compose nodes and relationships, e.g.,
     \begin{itemize}
       \item \small A \emph{software} must be ``\emph{hosted on}'' another \emph{software} or a \emph{Docker container}
       \item \small A \emph{Docker container} and \emph{Docker volume} cannot be ``\emph{hosted on}'' other components
@@ -435,18 +451,18 @@
 \section{Conclusions and Future work}\subsection*{}
   \begin{frame}{Conclusions}
     %The objective of this thesis was to design and prototype \dt an orchestration engine, which
-    \only<1->{
-    On the context of Deployment and Orchestration application, we treat:
+    \onslide<1->{
+    We focussed on the problem of orchestrating the deployment and management of composite cloud applications.
     \begin{itemize}
       \item Docker
       \item TOSCA YAML
     \end{itemize}
     }
     \bigskip
-    \only<2>{
-    Then we present the TosKer orchestration engine, which
+    \onslide<2>{
+    We presented the TosKer orchestration engine, which
     \begin{itemize}
-      \item extends TOSCA by providing a Docker-based orchestration engine for TOSCA application, and
+      \item extends TOSCA by providing a Docker-based orchestration engine for TOSCA applications, and
       \item extends Docker by adding the capability of orchestrating software components together with Docker containers/volumes
     \end{itemize}
     }
@@ -457,23 +473,23 @@
     % \end{itemize}
   \end{frame}
 
-  \begin{frame}{Imminent work}
+  \begin{frame}{Future work}
+    \begin{itemize}
+      \item Automatically determine the Docker containers needed to effectively run an application (\textbf{Dockerizer})
+      \item Support cluster of workstations and external cloud services
+      \item Integrate TosKer with fault-aware management protocols
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Focus on \textbf{Dockerizer}}
     \onslide<1->{
-    \textbf{Dockerize}, a completer of TosKer specification.
+    \textbf{Dockerizer}, a completer of TosKer specifications.
     }
     \onslide<2>{
       \begin{figure}
         \includegraphics[width=\textwidth]{img/dockerize_example.pdf}
       \end{figure}
     }
-  \end{frame}
-
-  \begin{frame}{Future work}
-    \begin{itemize}
-      \item Automatically determine the Docker containers needed to effectively run an application (\textbf{Dockerize})
-      \item Support cluster of workstations and external cloud services
-      \item Integrate TosKer with fault-aware management protocols
-    \end{itemize}
   \end{frame}
 
   \begin{frame}
