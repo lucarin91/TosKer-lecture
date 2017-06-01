@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.5.29)  31 MAY 2017 18:01
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Arch Linux) (preloaded format=xelatex 2017.4.30)  1 JUN 2017 01:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -673,6 +673,98 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count157
 \c@subtable=\count158
 )
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box54
+)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
+)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count159
+\pgfplotmarksize=\dimen199
+)
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikzleveldistance=\dimen260
+\tikzsiblingdistance=\dimen261
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count160
+\tikznumberofchildren=\count161
+\tikznumberofcurrentchild=\count162
+\tikz@fig@count=\count163
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count164
+\pgfmatrixcurrentcolumn=\count165
+\pgf@matrix@numberofcolumns=\count166
+)
+\tikz@expandcount=\count167
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+))) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count168
+\lst@gtempboxa=\box59
+\lst@token=\toks45
+\lst@length=\count169
+\lst@currlwidth=\dimen262
+\lst@column=\count170
+\lst@pos=\count171
+\lst@lostspace=\dimen263
+\lst@width=\dimen264
+\lst@newlines=\count172
+\lst@lineno=\count173
+\lst@maxwidth=\dimen265
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count174
+\lst@skipnumbers=\count175
+\lst@framebox=\box60
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeFrankfurt.sty
 (/usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemesmoothbars
 .sty)
@@ -681,27 +773,36 @@ y)
 (/usr/share/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeorchid.sty
 )
 (/usr/share/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewhale.sty)
-) (./main.aux)
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 35.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 35.
+
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -738,8 +839,8 @@ LaTeX Font Info:    ... okay on input line 64.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 64.
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring OFF on input line 66.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -747,58 +848,58 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count176
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
  (./main.out)
 (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 64.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 66.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 64.
+(Font)                  OT1/cmss/m/n --> TU/lmr/m/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmss/bx/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 64.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 64.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 64.
+(Font)                  OT1/cmr/m/it --> TU/lmss/m/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 64.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 64.
+(Font)                  OT1/cmr/bx/it --> TU/lmss/m/it on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 64.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 64.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 64.
+(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 64.
+(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmr/bx/n on input line 64.
+(Font)                  OT1/cmss/bx/n --> TU/lmr/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 64.
+(Font)                  TU/lmss/bx/n --> TU/lmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 64.
+(Font)                  TU/lmss/m/n --> TU/lmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 64.
+(Font)                  TU/lmss/m/it --> TU/lmss/bx/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/bx/n on input line 64.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/bx/n on input line 66.
 
 (/usr/share/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -824,130 +925,209 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 64.
+LaTeX Info: Redefining \includegraphics on input line 66.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (./main.nav) [1
+\c@lstlisting=\count177
+ (./main.nav)
+File: img/socc-logo.png Graphic file (type QTm)
+
+<use  "img/socc-logo.png" > [1
+
+] (./main.toc) [2
+
+] (./main.toc) [3
 
 ]
-(./main.toc) [2
+File: img/deployment_black.png Graphic file (type QTm)
 
-] [3
+<use  "img/deployment_black.png" >
+File: img/application.png Graphic file (type QTm)
+ <use  "img/application.png" >
+File: img/orchestrate.png Graphic file (type QTm)
 
-] (./main.toc) [4
+<use  "img/orchestrate.png" > [4
+
+]
+File: img/deployment_black.png Graphic file (type QTm)
+ <use  "img/deployment_black.png" >
+File: img/application.png Graphic file (type QTm)
+
+<use  "img/application.png" >
+File: img/orchestrate.png Graphic file (type QTm)
+ <use  "img/orchestrate.png" > [5
+
+]
+File: img/deployment_black.png Graphic file (type QTm)
+
+<use  "img/deployment_black.png" >
+File: img/application.png Graphic file (type QTm)
+ <use  "img/application.png" >
+File: img/orchestrate.png Graphic file (type QTm)
+
+<use  "img/orchestrate.png" > [6
+
+] (./main.toc) [7
 
 ]
 File: img/docker.png Graphic file (type QTm)
- <use  "img/docker.png" > [5
+ <use  "img/docker.png" >
+[8
 
 ]
 File: img/docker_vs_vm.png Graphic file (type QTm)
-
-<use  "img/docker_vs_vm.png" > [6
+ <use  "img/docker_vs_vm.png" > [9
 
 ]
 File: img/docker_achitecture_crop.png Graphic file (type QTm)
- <use  "img/docker_achitecture_crop.png" >
-[7
 
-] [8
-
-]
-File: img/docker_build.pdf Graphic file (type QTm)
- <use  "img/docker_build.pdf" > [9
-
-]
-File: img/docker_multicontainer.pdf Graphic file (type QTm)
-
-<use  "img/docker_multicontainer.pdf" > [10
+<use  "img/docker_achitecture_crop.png" > [10
 
 ] [11
 
-] (./main.toc) [12
+]
+File: img/docker_build.pdf Graphic file (type QTm)
 
-] [13
+<use  "img/docker_build.pdf" > [12
 
 ]
-File: img/service-template.png Graphic file (type QTm)
-
-<use  "img/service-template.png" > [14
+File: img/docker_multicontainer.pdf Graphic file (type QTm)
+ <use  "img/docker_multicontainer.pdf" >
+[13
 
 ]
-File: img/tosca_node_type.png Graphic file (type QTm)
- <use  "img/tosca_node_type.png" >
-[15
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+File: img/docker_compose.png Graphic file (type QTm)
+ <use  "img/docker_compose.png" >
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 7.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 7.
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <6> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 7.
+) [14
+
+] [15
 
 ] [16
 
 ] [17
 
 ]
-File: img/tosca_deploy.png Graphic file (type QTm)
- <use  "img/tosca_deploy.png" > [18
-
-] [19
-
-] (./main.toc) [20
+(./main.toc) [18
 
 ]
-[21
+File: img/oasis.png Graphic file (type QTm)
+ <use  "img/oasis.png" > [19
 
-] [22
+] [20
+
+]
+File: img/service-template.png Graphic file (type QTm)
+
+<use  "img/service-template.png" > [21
+
+]
+File: img/tosca_node_type.png Graphic file (type QTm)
+ <use  "img/tosca_node_type.png" >
+[22
+
+]
+File: img/tosca_how.png Graphic file (type QTm)
+ <use  "img/tosca_how.png" > [23
+
+]
+File: img/tosca_deploy.png Graphic file (type QTm)
+ <use  "img/tosca_deploy.png" > [24
+
+]
+File: img/tosca_deploy.png Graphic file (type QTm)
+
+<use  "img/tosca_deploy.png" > [25
+
+]
+File: img/tosca_deploy.png Graphic file (type QTm)
+ <use  "img/tosca_deploy.png" > [26
+
+]
+File: img/tosca_deploy.png Graphic file (type QTm)
+
+<use  "img/tosca_deploy.png" > [27
+
+] [28
+
+] (./main.toc) [29
+
+] [30
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 224.
- [23
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 303.
+ [31
 
-] [24
+] [32
 
 ]
 File: img/tosker_types_container.pdf Graphic file (type QTm)
- <use  "img/tosker_types_container.pdf" > [25
+
+<use  "img/tosker_types_container.pdf" > [33
 
 ]
 File: img/tosker_types_software.pdf Graphic file (type QTm)
 
-<use  "img/tosker_types_software.pdf" > [26
+<use  "img/tosker_types_software.pdf" > [34
 
 ]
 File: img/tosker_types_volume.pdf Graphic file (type QTm)
 
-<use  "img/tosker_types_volume.pdf" > [27
+<use  "img/tosker_types_volume.pdf" > [35
 
-] [28
+] [36
 
 ]
 File: img/thoughts_architecture.pdf Graphic file (type QTm)
 
-<use  "img/thoughts_architecture.pdf" > [29
+<use  "img/thoughts_architecture.pdf" > [37
 
 ]
 File: img/architecture.png Graphic file (type QTm)
  <use  "img/architecture.png" >
-[30
+[38
 
 ]
 File: img/tosker_how_1.pdf Graphic file (type QTm)
- <use  "img/tosker_how_1.pdf" > [31
+ <use  "img/tosker_how_1.pdf" > [39
 
 ]
 File: img/tosker_how_2.pdf Graphic file (type QTm)
  <use  "img/tosker_how_2.pdf" >
-[32
+[40
 
 ]
 File: img/tosker_how_3.pdf Graphic file (type QTm)
- <use  "img/tosker_how_3.pdf" > [33
+ <use  "img/tosker_how_3.pdf" > [41
 
 ]
 File: img/tosker_how_4.pdf Graphic file (type QTm)
  <use  "img/tosker_how_4.pdf" >
-[34
+[42
 
 ]
 File: img/tosker_how_5.pdf Graphic file (type QTm)
- <use  "img/tosker_how_5.pdf" > [35
+ <use  "img/tosker_how_5.pdf" > [43
 
 ]
 File: img/python.png Graphic file (type QTm)
@@ -956,18 +1136,27 @@ File: img/github.png Graphic file (type QTm)
 
 <use  "img/github.png" >
 File: img/mit.png Graphic file (type QTm)
- <use  "img/mit.png" > [36
+ <use  "img/mit.png" > [44
 
-] [37
+] (./main.toc) [45
 
-] (./main.toc) [38
+] [46
 
 ]
-[39
+[47
 
-] [40
+]
+File: img/dockerize_example.pdf Graphic file (type QTm)
+ <use  "img/dockerize_example.pdf" > [48
 
-] [41
+]
+File: img/dockerize_example.pdf Graphic file (type QTm)
+
+<use  "img/dockerize_example.pdf" > [49
+
+] [50
+
+] [51
 
 ]
 \tf@nav=\write6
@@ -979,19 +1168,19 @@ File: img/mit.png Graphic file (type QTm)
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 376.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 376.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 485.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 485.
  ) 
 Here is how much of TeX's memory you used:
- 21253 strings out of 493068
- 383720 string characters out of 6141028
- 494636 words of memory out of 5000000
- 24736 multiletter control sequences out of 15000+600000
- 4120 words of font info for 30 fonts, out of 8000000 for 9000
+ 25397 strings out of 493068
+ 469963 string characters out of 6141028
+ 586159 words of memory out of 5000000
+ 28777 multiletter control sequences out of 15000+600000
+ 8813 words of font info for 53 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 56i,20n,64p,770b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,64p,770b,1205s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (41 pages).
+Output written on main.pdf (51 pages).
